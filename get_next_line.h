@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hnass-pe <hnass-pe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 18:53:03 by hnass-pe          #+#    #+#             */
-/*   Updated: 2021/10/13 18:53:06 by hnass-pe         ###   ########.fr       */
+/*   Created: 2021/10/13 18:50:46 by hnass-pe          #+#    #+#             */
+/*   Updated: 2021/10/13 18:55:21 by hnass-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 char	*get_next_line(int fd);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strchr(const char *s, int c);
-int		ft_strlen(const char *s);
-int		ft_strlcpy(char *dst, char *src, size_t size);
-char	*ft_strdup(char *s);
+size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	*ft_strdup(const char *s);
 
 #endif
