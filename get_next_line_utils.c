@@ -6,11 +6,15 @@
 /*   By: hnass-pe <hnass-pe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 18:50:54 by hnass-pe          #+#    #+#             */
-/*   Updated: 2021/10/18 19:29:13 by hnass-pe         ###   ########.fr       */
+/*   Updated: 2021/10/20 21:12:36 by hnass-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+/*
+*	The strlen() function computes the length of the string str.
+*/
 
 size_t	ft_strlen(const char *s)
 {
@@ -24,15 +28,10 @@ size_t	ft_strlen(const char *s)
 	return ((size_t) n);
 }
 
-char	*ft_strchr(const char *s, int c)
-{
-	while (*s)
-		if (*s++ == (char) c)
-			return ((char *)--s);
-	if ((char) c == '\0')
-		return ((char *)s);
-	return (NULL);
-}
+/*
+*	Allocates (with malloc(3)) and returns a new string, which
+*	is the result of the concatenation of ’str1’ and ’str2’.
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -59,6 +58,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
+/*
+*	The strlcpy() copies up to size - 1 characters from the string src
+*	to dst, NUL-terminating the result if dest_size is not 0.
+*/
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t		s_len;	
@@ -83,6 +87,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (s_len);
 }
 
+/*
+*	The strdup() function allocates sufficient memory for a copy of the
+*	string str, does the copy, and returns a pointer to it.
+*/
+
 char	*ft_strdup(const char *s)
 {
 	int		i;
@@ -100,6 +109,11 @@ char	*ft_strdup(const char *s)
 	str[i] = '\0';
 	return (str);
 }
+
+/*
+*	Allocates (with malloc(3)) and returns a substring from the string ’s’.
+*	The substring begins at index ’start’ and is of maximum size ’len’.
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
