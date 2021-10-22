@@ -6,7 +6,7 @@
 /*   By: hnass-pe <hnass-pe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 19:32:26 by hnass-pe          #+#    #+#             */
-/*   Updated: 2021/10/20 21:13:52 by hnass-pe         ###   ########.fr       */
+/*   Updated: 2021/10/21 07:53:51 by hnass-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*get_line(char	**static_buffer, char	**line)
 	if ((*static_buffer)[line_len] == '\n')
 	{
 		*line = ft_substr(*static_buffer, 0, (line_len + 1));
-		new_buffer = ft_strdup(&(*static_buffer)[line_len + 1]);
+		new_buffer = ft_strdup(&(*static_buffer)[line_len + 1]); //o & pega o endereço da variavel
 	}
 	else
 		*line = ft_strdup(*static_buffer);
@@ -84,7 +84,7 @@ char	*read_file(int	fd, char	**buffer)
 {
 	static char	*static_buffer = NULL;
 	char		*line;
-	ssize_t		n;
+	ssize_t		n; //ssize_t = signed size_t / size_t = unsigned
 
 	n = 1;
 	if (!static_buffer)
