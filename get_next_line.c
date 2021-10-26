@@ -6,7 +6,7 @@
 /*   By: hnass-pe <hnass-pe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 19:32:26 by hnass-pe          #+#    #+#             */
-/*   Updated: 2021/10/21 07:53:51 by hnass-pe         ###   ########.fr       */
+/*   Updated: 2021/10/26 20:32:47 by hnass-pe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char	*get_line(char	**static_buffer, char	**line)
 *	with the contents of the buffer.
 */
 
-char	*read_file(int	fd, char	**buffer)
+char	*read_file(int fd, char	**buffer)
 {
 	static char	*static_buffer = NULL;
 	char		*line;
@@ -105,7 +105,7 @@ char	*read_file(int	fd, char	**buffer)
 *	file descriptor.
 */
 
-char	*get_next_line(int	fd)
+char	*get_next_line(int fd)
 {
 	char		*buffer;
 
